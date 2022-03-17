@@ -54,7 +54,7 @@ app.use(session({
   secret: 'mysupersecret',
   resave: false,
   saveUninitialized: false,
-  store : MongoStore.create({mongoUrl : 'mongodb://localhost:27017/sumit2' , collectionName : 'sessions'}),
+  store : MongoStore.create({mongoUrl : 'mongodb://asim:Mardan8110@cluster0-shard-00-00.btwlh.mongodb.net:27017,cluster0-shard-00-01.btwlh.mongodb.net:27017,cluster0-shard-00-02.btwlh.mongodb.net:27017/Sumit2?ssl=true&replicaSet=atlas-x564yd-shard-0&authSource=admin&retryWrites=true&w=majority' , collectionName : 'sessions'}),
   cookie: { maxAge : 1000 * 60 * 60 * 24 }
 }))
 app.use((req , res , next)=>{
