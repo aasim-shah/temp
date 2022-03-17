@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300&display=swap');
+
+*{
+    margin : 0px;
+    padding : 0px;
+    font-family: 'Mukta', sans-serif;
+}
+.theme-color{
+    background-color: rgb(33, 118, 175) !important;
+}
+.text-color{
+    color: rgb(23, 104, 158);
+}
+.border_bb{
+    border-bottom: 1px solid rgb(23, 104, 158); ;
+}
+.card:hover{
+    border: 1px solid rgba(0, 0, 0, 0.541);
+    transition: all 0.5;
+}
+.owl-dots{
+    display: none;
+}
+.scroll_x{
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    
+}
+.scroll_x::-webkit-scrollbar {
+    display: none;
+}
+
+#searchPopUp{
+    transition: all 0.5s;
+    transform: translateY(-100px);
+    opacity: 0px;
+    position: fixed;
+}
+.active{
+    z-index: 999;
+    opacity: 100;
+    background-color: white;
+    transform: translateY(0px) !important;
+}
+
+
+#overlay{
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 666;
+    background-color: #0009;
+    -ms-transition: all .45s cubic-bezier(.29,.63,.44,1);
+    -webkit-transition: all .45s cubic-bezier(.29,.63,.44,1);
+    transition: all .45s cubic-bezier(.29,.63,.44,1);
+}
+
+.card_overlay{
+        display: none;
+        position: absolute;
+        height: 45vh;
+        z-index: 666;
+        background-color: #0009;
+        -ms-transition: all .45s cubic-bezier(.29,.63,.44,1);
+        -webkit-transition: all .45s cubic-bezier(.29,.63,.44,1);
+        transition: all .45s cubic-bezier(.29,.63,.44,1);
+    
+}
+.search{
+    width: 20%;
+}
+.deleted{
+    color: red;
+}
+a:hover {
+    text-decoration: none !important;
+    color: inherit !important;
+ }
+
+.cart_number{
+    position: absolute;
+    right: -9px;
+    background-color: black;
+    bottom: 18px;
+    width: 21px;
+    text-align: center;
+    height: 22px;
+    border-radius: 50%;
+
+}
+#search{
+    width: 98%;
+    background-color: transparent;
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+#single_card:hover .ctb{
+    display: block;
+}
+#single_card:hover .card_overlay{
+    display: block;
+}
+.ctb{
+    position: fixed;
+    background-color: violet;
+    z-index: 777;
+    display: none;
+    top: 50%;
+    left: 10%;
+    width: 20%;
+}
+
+@media only screen and (max-width: 500px) {
+    .search{
+        width: 70%;
+    }
+    .ctb{
+        position: fixed;
+        display: block;
+        top: 58%;
+        width: 100%;
+        left: 0px;
+        background-color: violet;
+    }
+    
+  }

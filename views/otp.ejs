@@ -1,0 +1,19 @@
+<%- include('./partials/header.ejs') %>
+<%- include('./partials/navbar.ejs') %>
+
+<div class="container w-72 flex items-end h-72" >
+    <form action="/verifyOtp" method="post">
+            <input type="hidden"class="border-gray-900 border-b-2 px-2 py-2 w-64 w-68"  name="phone" value="<%= phone %>">
+            <p class="alert alert-success" role="alert">An OTP has been sent to your Phone </p>
+            <input type="text"class="border_bb px-2 py-2 w-64 w-68" placeholder="Enter your OTP " name="otp">
+       <div class="d-flex justify-content-center my-4">
+        <button type="submit" class="font-bold text-white  text-lg px-3 theme-color rounded-full">VERIFY</button>
+       </div>
+    </form>
+</div>
+
+
+
+<%- include('./partials/footer.ejs') %>
+
+
