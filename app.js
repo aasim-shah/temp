@@ -91,11 +91,7 @@ passport.serializeUser(function(user, done) {
 app.get('/' , home.home)
 app.use('/user' , userRoute)
 
-app.post('/profile', upload.single('avatar'), function (req, res, next) {
-  res.redirect('/');
-  // req.file is the `avatar` file
-  // req.body will hold the text fields, if there were any
-})
+
 
 app.get('/register', home.registered);
 app.post('/register', home.registering);
@@ -105,7 +101,7 @@ home.login_post
 );
 
 
-app.get('/checkout' , async (req , res)=> {
+app.get('/checkout' ,Tokenauth , async (req , res)=> {
   var options = {
     amount: 900 * 100,  // amount in the smallest currency unit
     currency: "INR",
